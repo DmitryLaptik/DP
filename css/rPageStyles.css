@@ -1,0 +1,220 @@
+body{ background-color: #ffffff}
+
+#wrapper {
+    background-color: skyblue;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 600px;
+    max-width: 1000px;
+    margin: auto;
+}
+#wrapper3 {
+    background-color: skyblue;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 100%;
+    max-width: 1000px;
+    margin: auto;
+    max-height: 100%;
+
+}
+#newQuest{
+    margin-left: -150px;
+    position: relative;
+    width:100%;
+    top: 5%;
+    left: 50%;
+}
+#wrapper2 {
+    background-color: lightblue;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 100%;
+    width: 60%;
+    margin: auto;
+}
+#registration_text {
+    background-color: #5555ff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    font: 28px 'Oswald', Arial bold;
+    padding: 10px;
+}
+textarea{
+    width: 50%;
+    height: 100px;
+    resize: none;
+    border-radius: 10px;
+    border: 0px;
+}
+#input_data {
+    margin-left: -150px;
+    position: relative;
+    width:300px;
+    top: 5%;
+    left: 50%;
+}
+pre{
+    background-color: #e2fffa;
+}
+fieldset{
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+#back{
+    background-color: skyblue;
+    border:0px;
+    border-radius: 25px;
+    margin:10%;
+    margin-top:1%;
+    margin-bottom:3%;
+}
+p{
+    font-size: 30px;
+    padding-top: 5%;
+    position: relative;
+    left: 58%;
+    width: 300px;
+    margin-left: -150px;
+}
+#next{
+    position: relative;
+    left: 45%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+}
+#next2{
+    position: relative;
+    left: 45%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+}
+#prev{
+    position: relative;
+    left: 45%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+}
+#back2{
+    position: relative;
+    left: 10%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+}
+
+button#subButton{
+    position: relative;
+    border-radius: 5px;
+
+}
+div#backAnswers{
+    width: 100%;
+    height: 100%;
+}
+label{
+    width: 80%;
+    background-color: #dfffff;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 10%;
+    margin-bottom: 2px;
+}
+input[type="radio"]:checked + label{
+    background: #4dd471;
+}
+
+button#backBut{
+    position: relative;
+    margin-left: -100px;
+    width: 300px;
+    left:38%;
+    top:50%;
+}
+button#mainBackBut{
+    position: relative;
+    border-radius: 5px;
+}
+button#admin_but{
+    position: relative;
+    margin-left: -100px;
+    left:35%;
+    border-radius: 5px;
+}
+div#adminButtons{
+    background-color: #5555ff;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 400px;
+    position: relative;
+    margin-left: -75px;
+    width: 400px;
+    left: 34%;
+}
+div#find_area{
+    position: relative;
+    left: 15%;
+    top:5%;
+}
+div#find_area * {
+    margin-left: -150px;
+    width: 300px;
+    left: 42%;
+    position: relative;
+}
+button#prevPage{
+    position: relative;
+    top:5%;
+    left:10%;
+    margin-left: -150px;
+}
+button#prevPage2{
+    position: relative;
+    margin-top: 3%;
+    left: 57%;
+    margin-left: -150px;
+}
+/*button#findButton{*/
+/*    position: relative;*/
+/*    left:50%;*/
+/*    margin-left: -75px;*/
+/*}*/
+button{
+    position: relative;
+    border-radius: 20px;
+    left: 13%;
+    background: -moz-linear-gradient(#00BBD6, #EBFFFF);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#00BBD6), to(#EBFFFF));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
+    padding: 3px 7px;
+    color: #333;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #666;
+}
+#input_data *{
+    margin-top: 9px;
+    position: relative;
+    left: 2%;
+    width: 100%;
+}
+#choose_data *{
+    margin-top: 9px;
+    position: relative;
+    left: 50%;
+    border-radius: 10px;
+    margin-left: -150px;
+    width: 300px;
+}
+legend{
+
+}

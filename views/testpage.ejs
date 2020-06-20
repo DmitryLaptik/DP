@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Тестирование</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"  href="">
+    <link rel="stylesheet" href="../css/rPageStyles.css">
+    <script>
+        function activate(){
+            let inp = document.getElementsByName('answer');
+            for (let i = 0; i < inp.length; i++) {
+                if (inp[i].type === "radio" && inp[i].checked) {
+                    document.getElementById('next').disabled = false;
+                }
+            }
+        }
+
+        function setAnswer(input) {
+            for(let i = 1; i <=6;i++){
+                let el = document.getElementById('r' + i);
+                if(el.id !== input.id) el.value = "off";
+                else input.value = i-1;
+
+            }
+        }
+        function back(form){
+            let question = 'Желаете выйти?';
+            let result = confirm(question);
+            if(result) {
+                form.submit()
+            }
+            else return false
+        }
+    </script>
+</head>
+<body>
+<div id = "back">
+    <form  action="/" id = "newQuest" method="post" style = "left: 10%; position: relative; " onsubmit=" return back(this)">
+        <button id = "mainBackBut" >Вернуться на главную</button>
+    </form>
+<p>Вопрос <%=testData.countFinishQuest%> из 15</p><br>
+<form action="test" method="post">
+<fieldset id = "form" onclick="activate()" >
+    <legend><%=testData.content1%></legend>
+    <pre><code><%=testData.content2%></code></pre><br>
+    <input type = "hidden" name = "idUser" value = <%= testData.userId%>>
+    <input type = "hidden" name = "idQuest" value = <%= testData.idQuest%>>
+    <input type = "hidden" name = "idTheme" value = <%= testData.idTheme%>>
+    <input type = "hidden" name = "answersIds" value = <%= testData.answersIds%>>
+    <div id = "backAnswers">
+        <% for(var i=0; i<testData.answers.length;i++) {%>
+        <input type="radio" required name="answer" id="r<%= i+1%>" hidden = hidden onclick="setAnswer(this)"><label for="r<%= i+1%>"><%= testData.answers[i]%></label>
+        <%} %>
+    </div>
+</fieldset><br>
+    <button id = "next" type="submit"  disabled = "disabled">Продолжить</button>
+</form>
+</div>
+</body>
+
+</html>

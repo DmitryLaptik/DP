@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta http-equiv="content-type" content="text/html">
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width = device- width, initial-scale=1.0">
+    <meta http-equiv = "X-AU-Compatible" content="ie=edge">
+    <title>Администратор</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"  href="">
+    <link rel="stylesheet" href="../../css/rPageStyles.css">
+    <script>
+        function saveData(){
+        document.querySelectorAll('input, select').forEach(function(e) {
+            if(e.value === '') e.value = sessionStorage.getItem(e.name);
+        });
+    }
+    document.addEventListener("DOMContentLoaded", function() { // событие загрузки страницы
+            document.querySelectorAll('textarea, input').forEach(function(e) {
+                if(e.value === '') e.value = sessionStorage.getItem(e.name, e.value);
+                e.addEventListener('input', function() {
+                    sessionStorage.setItem(e.name, e.value);
+                })
+            })
+
+        });
+    function clearData(){
+        sessionStorage.clear();
+    }
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id = "adminButtons">
+           <br>
+            <form action = "get_all" method="post" >
+                <input type = "hidden" name = "login">
+                <input type = "hidden" name = "password">
+                <button type="submit" onclick="saveData()" >Вывести результаты всех пользователей</button>
+            </form>
+            <form action = "addNew" method="post" >
+                <input type = "hidden" name = "login">
+                <input type = "hidden" name = "password">
+                <button type="submit" onclick="saveData()" >Добавить вопрос</button>
+            </form>
+            <form action = "updateQuest" method="post" >
+                <input type = "hidden" name = "login">
+                <input type = "hidden" name = "password">
+                <button type="submit" onclick="saveData()" >Обновить вопрос</button>
+            </form>
+            <form action = "delete" method="post" >
+                <input type = "hidden" name = "login">
+                <input type = "hidden" name = "password">
+                <button type="submit" onclick="saveData()" >Удалить вопрос</button>
+            </form>
+            <form action = "admin" method="get" style="top: 50%;position: relative;" >
+                <button id = "backBut" type="submit" onclick="clearData()">Выйти</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
